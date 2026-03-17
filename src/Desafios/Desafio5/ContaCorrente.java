@@ -8,13 +8,9 @@ public class ContaCorrente extends ContaBancaria{
     public ContaCorrente(double saldo, TipoConta tipo) {
         super(saldo, tipo);
     }
-    @Override
-    public void consultarSaldo() {
-        System.out.println("O saldo atual da Conta " + this.tipo + " é: " + this.saldo);
-    }
 
     @Override
-    public void depositar(TipoConta tipo, double valor) {
+    public void depositar(double valor) {
         if (valor>0) {
             this.saldo += valor;
             System.out.println("Deposito no valor de " + valor + " realizado com sucesso");

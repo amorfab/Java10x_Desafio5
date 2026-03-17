@@ -9,12 +9,7 @@ public class ContaPoupanca extends ContaBancaria{
     }
 
     @Override
-    public void consultarSaldo() {
-        System.out.println("O saldo atual da Conta " + this.tipo + " é: " + this.saldo);
-    }
-
-    @Override
-    public void depositar(TipoConta tipo, double valor) {
+    public void depositar(double valor) {
         if (valor>0) {
             this.saldo += valor - (valor * .01);
             System.out.println("Deposito no valor de " + (valor - (valor * .01)) +" realizado com sucesso");

@@ -13,8 +13,10 @@ public abstract class ContaBancaria implements Conta {
     }
 
     @Override
-    public abstract void consultarSaldo();
+    public void consultarSaldo() {
+        System.out.println("O saldo atual da Conta " + this.tipo + " é: " + this.saldo);
+    }
 
     @Override
-    public abstract void depositar(TipoConta tipo, double valor);
+    public abstract void depositar(double valor);
 }
